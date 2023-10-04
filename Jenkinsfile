@@ -13,6 +13,14 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''
+                ls -ltr
+                pwd
+                date
+                time
+                echo "This is for testing the multiple steps"
+                '''
+                 
 
             }
         }
