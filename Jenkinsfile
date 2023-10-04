@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                error 'This is failure'
             }
         }
         stage('Test') {
