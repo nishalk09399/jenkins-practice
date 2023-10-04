@@ -19,6 +19,7 @@ pipeline {
                 date
                 time
                 echo "This is for testing the multiple steps"
+                echo "This is the response testing the github webhook and jenkins connection setup"
                 '''
                  
 
