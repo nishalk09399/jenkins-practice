@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ls -ltr'
+                sh 'ls -latr'
                 sh 'pwd'
                 //error 'This is failure'
             }
