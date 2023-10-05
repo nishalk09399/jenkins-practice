@@ -1,5 +1,14 @@
 pipeline {
-    agent { node { label 'AGENT-1' } } //you can keep any server name here, I have my agent-1 server so, given that 
+    
+     agent { node { label 'AGENT-1' } } //you can keep any server name here, I have my agent-1 server so, given that 
+     options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+    environment {
+        USER = 'Nishal'
+    }
+
+
 
     stages {
         stage('Build') {
@@ -7,7 +16,8 @@ pipeline {
                 echo 'Building..'
                 sh 'ls -latr'
                 sh 'pwd'
-                //error 'This is failure'
+                sh 'printenv'
+               
             }
         }
         stage('Test') {
