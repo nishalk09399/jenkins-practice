@@ -6,9 +6,9 @@ pipeline {
     }
 
     // this is the cron tab for the trigger automatic build for every 10 min 
-    triggers {
-        cron('*/10 * * * *')
-    }
+    // triggers {
+    //     cron('*/10 * * * *')
+    // }
     //environament concept
     environment {
         USER = 'Nishal'
