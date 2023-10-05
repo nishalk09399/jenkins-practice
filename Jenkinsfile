@@ -80,9 +80,9 @@ pipeline {
             }
         }
 
-        //
+        //this is the input stage that we are giving in pipeline asking for the approval 
 
-        stage('Example') {
+        stage('Input') {
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
@@ -95,8 +95,7 @@ pipeline {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
-    }
-
+    
     }
 
     post { 
@@ -110,5 +109,5 @@ pipeline {
             echo 'I will always run when the job is failure'
         }
     }
-
+}
 
