@@ -112,11 +112,13 @@ pipeline {
                 stage('Branch A') {
                     steps {
                         echo "On Branch A"
+                        sh 'sleep 10' //here we are giving sleep as 10s because to see the execution some slow in Jenkins UI
                     }
                 }
                 stage('Branch B') {
                     steps {
                         echo "On Branch B"
+                        sh 'sleep 10'
                     }
                 }
                 stage('Branch C') {
@@ -124,11 +126,13 @@ pipeline {
                         stage('Nested 1') {
                             steps {
                                 echo "In stage Nested 1 within Branch C"
+                                sh 'sleep 10'
                             }
                         }
                         stage('Nested 2') {
                             steps {
                                 echo "In stage Nested 2 within Branch C"
+                                sh 'sleep 10' 
                             }
                         }
                     }
