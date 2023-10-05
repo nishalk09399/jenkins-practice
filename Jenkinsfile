@@ -4,6 +4,11 @@ pipeline {
      options {
         timeout(time: 1, unit: 'HOURS') 
     }
+
+    // this is the cron tab for the trigger automatic build for every 1 min 
+    triggers {
+        cron('* * * * *')
+    }
     //environament concept
     environment {
         USER = 'Nishal'
